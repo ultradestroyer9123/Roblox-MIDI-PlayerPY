@@ -1,4 +1,9 @@
-import pretty_midi, os, pyperclip
+try:
+    import pretty_midi, os, pyperclip
+except ImportError:
+    import os
+    os.system("pip install pretty_midi && pip install pyperclip")
+    import pretty_midi, pyperclip
 number_round = int(input("Round number (2: less accurate,saves data|3: more accurate,more data|4,5...)\n > "))
 os.chdir(os.path.dirname(__file__))
 cnt = 0

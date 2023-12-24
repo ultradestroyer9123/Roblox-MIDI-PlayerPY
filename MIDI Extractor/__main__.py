@@ -24,5 +24,5 @@ for instrument in midi_data.instruments:
         duration = round(note.end-note.start,number_round)
         print(f'"{str(note.pitch)}|{str(round(note.start,number_round))}|{str(duration)},"',end="")
         apnd += f'{str(note.pitch)}|{str(round(note.start,number_round))}|{str(duration)},'
-print(apnd)
+print("Copied to your clipboard")
 pyperclip.copy('"' + apnd + '"')

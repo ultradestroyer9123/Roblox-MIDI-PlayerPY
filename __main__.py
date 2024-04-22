@@ -10,11 +10,11 @@ if 'e' in number_round:
 else:
     plane_crazy = False
 number_round = int(number_round.replace("e",""))
-os.chdir(os.path.dirname(__file__))
+os.chdir(os.path.dirname(__file__) + "\\MIDI_Files")
 cnt = 0
 lst = []
 made_temp = False
-for b in os.listdir("MIDI_Files"):
+for b in os.listdir():
     if b.endswith(".mid") or b.endswith(".midi"):
         lst.append(b)
 for x in lst:
